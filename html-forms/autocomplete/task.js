@@ -67,8 +67,18 @@ class Autocomplete {
     this.list.innerHTML = html.join('');
   }
 
-  getMatches( text ) {
-    /*
+	getMatches(text) {
+		const array = [];
+
+		Array.from(this.input.options).forEach(el => {
+			if (el.text.includes(text)) {
+				array.push({text: el.text, value: el.value});    
+			} 
+		})   
+
+		return array;
+	
+	/*
       TODO: этот метод нужно дописать
       text - фраза, которую вводят в поле поиска
       Метод должен вернуть массив.
@@ -77,17 +87,17 @@ class Autocomplete {
       Подходящие опции - те, чей текст содержит то, что есть в аргументе text
       Необходимо вернуть массив объектов со свойствами:
       {
-        text: 'Содержимое <option>',
-        value: 'Содержимое атрибута value'
+			text: 'Содержимое <option>',
+			value: 'Содержимое атрибута value'
       }
-    */
-    return [
-      {
-        text: 'Чубакка',
-        value: '1'
-      }
-    ];
-  }
+	*/
+		/* return [
+			{
+				text: 'Чубакка',
+				value: '1'
+			}
+		]; */ 
+	}
 }
 
 new Autocomplete( document.querySelector( '.autocomplete' ));
