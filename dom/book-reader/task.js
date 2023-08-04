@@ -23,5 +23,5 @@ function fontChange(ev) {
 		letter.classList.remove('font-size_active');
 	}
 
-	ev.terget.classList.add('font-size_active');
+	ev.target.classList.add('font-size_active');
 }
