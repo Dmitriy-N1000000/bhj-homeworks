@@ -13,21 +13,10 @@ const addTodo = () => {
    input.value = '';
 };
 
-input.addEventListener('keydown', ev => {
-
-   if (ev.key === 'Enter')  {
-    ev.preventDefault();
-
-    if(input.value !== '') {
-      addTodo();
-     }
-   }
-})
-
 tasksControl.addEventListener('submit', ev => {
    ev.preventDefault();
   
-      if(input.value !== '') {
+      if(input.value.trim() !== '') {
         addTodo();
       }
    }
